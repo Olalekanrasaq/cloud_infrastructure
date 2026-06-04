@@ -1,7 +1,7 @@
 version: 3
 projects:
 - name: atlantis-project
-  dir: .         
+  dir: aws         
   workspace: default
   autoplan:
     when_modified:
