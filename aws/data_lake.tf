@@ -16,3 +16,9 @@ resource "aws_s3_bucket_versioning" "versioning" {
     status = var.versioning
   }
 }
+
+resource "aws_s3_bucket" "test-bucket" {
+  bucket = "cocosurf-test-bucket"
+
+  tags = local.common_tags
+}

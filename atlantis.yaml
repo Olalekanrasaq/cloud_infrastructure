@@ -1,0 +1,8 @@
+projects:
+- name: atlantis-project
+  dir: .         
+  workspace: default
+  autoplan:
+    when_modified:
+      - "*.tf"
+    enabled: true
