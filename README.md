@@ -22,10 +22,10 @@ This repository manages cloud infrastructure using Terraform, to provision and m
 
 # Repository Workflow
 
-Terraform planning and application are handled automatically by Atlantis, which is integrated with this repository and operates exclusively on git push. Once git push is made to the repo, 
+Terraform planning and application are handled automatically by Atlantis, which is integrated with this repository and operates exclusively on Pull Request. Once Pull Request is made to the repo, 
 
 - GitHub Actions runs validation checks
 - Atlantis automatically runs terraform plan
-- After reviewing the plan, atlantis apply is implemented.
+- After reviewing the plan, Atlantis runs by commenting atlantis apply directly from the PR.
 
 This workflow ensures that infrastructure changes are reviewed, validated, and applied in a safe and auditable way across all cloud platforms.
