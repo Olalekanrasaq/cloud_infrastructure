@@ -1,7 +1,8 @@
-data "aws_secretsmanager_secret_version" "snowflake_creds" {
-  secret_id = "/atlantis/snowflake-credentials"
+data "aws_ssm_parameter" "snowflake_creds" {
+  name            = "/atlantis/snowflake-credentials"
+  with_decryption = true
 }
 
 locals {
-  snowflake_creds = jsondecode(data.aws_secretsmanager_secret_version.snowflake_creds.secret_string)
+  snowflake_creds = jsondecode(data.aws_ssm_parameter.snowflake_creds.value)
 }
