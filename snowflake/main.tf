@@ -1,10 +1,10 @@
-resource "snowflake_database" "cocosurf_sf_db" {
-  name         = "COCOSURF_DB"
+resource "snowflake_database" "commerce_stream_db" {
+  name         = "OLAK_COMMERCE_STREAM_DB"
   is_transient = false
 }
 
-resource "snowflake_warehouse" "cocosurf_sf_wh" {
-  name                      = "COCOSURF_WH"
+resource "snowflake_warehouse" "commerce_stream_wh" {
+  name                      = "OLAK_COMMERCE_STREAM_WH"
   warehouse_type            = "STANDARD"
   warehouse_size            = "XSMALL"
   max_cluster_count         = 1
