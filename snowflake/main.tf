@@ -1,10 +1,10 @@
 resource "snowflake_database" "commerce_stream_db" {
-  name         = "OLAK_COMMERCE_STREAM_DB"
+  name         = "OLAK_COMMERCE_STREAMING_DB"
   is_transient = false
 }
 
 resource "snowflake_warehouse" "commerce_stream_wh" {
-  name                      = "OLAK_COMMERCE_STREAM_WH"
+  name                      = "OLAK_COMMERCE_STREAMING_WH"
   warehouse_type            = "STANDARD"
   warehouse_size            = "XSMALL"
   max_cluster_count         = 1
