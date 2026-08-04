@@ -16,3 +16,9 @@ resource "aws_s3_bucket_versioning" "versioning" {
     status = var.versioning
   }
 }
+
+resource "aws_s3_bucket" "test_bucket" {
+  bucket = "class-samuel-test-bucket"
+
+  tags = local.common_tags
+}
